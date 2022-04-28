@@ -1,0 +1,11 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rent Shit",
+    "description": "This fucker api is a rent shit",
+    "version": "1.0.0",
+    "contact": {
+      "email": "jeanfg86@gmail.com"
+    }
+  }
+}
