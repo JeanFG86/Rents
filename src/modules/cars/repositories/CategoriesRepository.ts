@@ -3,8 +3,18 @@ import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesReposito
 export class CategoryRepository implements ICategoriesRepository {
   private readonly categories: Category[]
 
-  constructor () {
+  private static INSTANCE: CategoryRepository
+
+  private constructor () {
     this.categories = []
+  }
+
+  public static getInstance (): CategoryRepository {
+    if (CategoryRepository.INSTANCE === null || CategoryRepository.INSTANCE === undefined) {
+      CategoryRepository.INSTANCE = new CategoryRepository()
+    }
+
+    return CategoryRepository.INSTANCE
   }
 
   create ({ name, description }: ICreateCategoryDTO): void {
