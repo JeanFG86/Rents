@@ -1,5 +1,5 @@
-import { Category } from '../module/Category'
-import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesRepository'
+import { Category } from '../../module/Category'
+import { ICategoriesRepository, ICreateCategoryDTO } from '../ICategoriesRepository'
 export class CategoryRepository implements ICategoriesRepository {
   private readonly categories: Category[]
 
